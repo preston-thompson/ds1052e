@@ -15,4 +15,12 @@ Assuming `/dev/usbtmc1` is the scope:
 
 `get_capture /dev/usbtmc1 > capture.csv`
 
-Scope captures are 600 datapoints.
+Scope captures are 600 datapoints. The program outputs data in CSV format. It looks like this:
+
+```
+-3.000000e-03,3.294118e+00
+-2.990000e-03,3.309804e+00
+-2.980000e-03,3.294118e+00
+```
+
+The first column is the timestamp in seconds, the second column is the first enabled channel.
