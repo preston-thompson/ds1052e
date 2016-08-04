@@ -1,11 +1,11 @@
 # ds1052e
-Programs to control a Rigol DS1052E oscilloscope from a UNIX environment.
+C program to control a Rigol DS1052E oscilloscope from a UNIX environment.
 
 ## Building
 
 1. Clone the repository
 2. Run `make`
-3. Run the binaries from where they are, or install them into your system in /usr/local/bin
+3. Run `ds1052e` from where it is, or install it into your system in `/usr/local/bin`
 
 ## Usage
 
@@ -13,7 +13,7 @@ Programs to control a Rigol DS1052E oscilloscope from a UNIX environment.
 
 Assuming `/dev/usbtmc1` is the scope:
 
-`get_capture /dev/usbtmc1 > capture.csv`
+`ds1052e /dev/usbtmc1 capture > capture.csv`
 
 Scope captures are 600 datapoints. The program outputs data in CSV format. It looks like this:
 
