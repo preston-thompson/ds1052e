@@ -12,7 +12,7 @@ struct measurement {
     char *cmd;
 };
 
-struct measurement measurements[] = {
+static const struct measurement measurements[] = {
     {"Vptp", "VPP"},
     {"Vmax", "VMAX"},
     {"Vmin", "VMIN"},
