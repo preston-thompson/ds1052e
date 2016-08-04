@@ -1,2 +1,2 @@
-get_capture: get_capture.c
-	cc get_capture.c -o get_capture
+ds1052e: ds1052e.c instr.c capture.c
+	cc ds1052e.c instr.c capture.c -o ds1052e
