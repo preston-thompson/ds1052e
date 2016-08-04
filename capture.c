@@ -11,8 +11,7 @@
 
 #define BUF_SIZE 256
 
-struct Channel {
-
+struct channel {
     char *name;     /* name of the channel in SCPI commands */
     uint8_t *data;  /* pointer to buffer for capture data */
     float scale;    /* vertical scale */
@@ -37,7 +36,7 @@ size_t download_capture(    /* returns number of bytes in capture */
 
 float get_datapoint(        /* returns the datapoint value, converted from
                                0-255 */
-    struct Channel *chan,   /* channel */
+    struct channel *chan,   /* channel */
     unsigned i              /* which datapoint */
 ) {
     /* The datapoint has to be inverted, hence the subtraction from 255. */
@@ -51,7 +50,7 @@ int capture() {
     float timescale;    /* horizontal timescale (entire capture) */
     float time_offset;  /* time offset of first datapoint from trigger */
     float timestep;     /* timestep per datapoint */
-    struct Channel chan[] = {
+    struct channel chan[] = {
         {"CHAN1", NULL, 0},
         {"CHAN2", NULL, 0}
     };

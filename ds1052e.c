@@ -24,6 +24,9 @@ int main(
     if (!strcmp(argv[2], "capture"))
         return capture();
 
+    if (!strcmp(argv[2], "measure"))
+        return measure();
+
     fprintf(stderr, "unrecognized command\n");
     return 1;
 }
